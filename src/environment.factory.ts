@@ -1,4 +1,4 @@
-import { classToClass } from 'class-transformer';
+import { instanceToInstance } from 'class-transformer';
 import { validateSync } from 'class-validator';
 import { ENVIRONMENT_METAKEY } from './environment-metakey.const';
 import { EnvironmentLoadingException } from './environment-loading.exception';
@@ -31,7 +31,7 @@ export function getEnvironment<T extends object>(
     instance[key] = process.env[environmentName] ?? instance[key];
   }
 
-  instance = classToClass(instance, options?.transformOptions);
+  instance = instanceToInstance(instance, options?.transformOptions);
 
   const errors = validateSync(instance, options?.validatorOptions);
 
