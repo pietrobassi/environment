@@ -1,6 +1,6 @@
 {
-  "name": "@nestjs-steroids/environment",
-  "version": "1.0.2",
+  "name": "@pietrobassi/environment",
+  "version": "0.1.0",
   "description": "Extremely simple environment module (config loader) for your NestJS application",
   "author": "Vlad Krokhin",
   "keywords": [
@@ -17,7 +17,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nestjs-steroids/environment"
+    "url": "git+https://github.com/pietrobassi/environment.git"
   },
   "scripts": {
     "prebuild": "rimraf dist",
